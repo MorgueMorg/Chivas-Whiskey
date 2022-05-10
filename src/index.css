@@ -23,11 +23,19 @@ video {
 
 /* Убирает элементы плеера */
 video::-webkit-media-controls {
-  display:none !important;
+  display: none !important;
 }
 
-.lalisa-text h2 {
+.lalisa-text {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lalisa-text h1 {
   font-weight: bold;
+  margin: 40px !important;
 }
 
 .lalisa-text p {
@@ -36,9 +44,6 @@ video::-webkit-media-controls {
   font-size: 24px;
 }
 
-.lalisa-text {
-  display: flex;  
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+.carousel {
+  margin-top: 40px
 }

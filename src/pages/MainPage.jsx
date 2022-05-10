@@ -1,5 +1,6 @@
 import React from "react";
 import AboutUs from "./AboutUs";
+import LisaPhotos from "./LisaPhotos";
 import LisaVid from "./LisaVid";
 
 const MainPage = () => {
@@ -8,6 +9,7 @@ const MainPage = () => {
       <div className="cont">
         <LisaVid />
         <AboutUs />
+        <LisaPhotos />
       </div>
     </>
   );
