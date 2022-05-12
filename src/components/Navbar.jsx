@@ -10,7 +10,7 @@ import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import chivasLogo from "../assets/chivasLogo.png";
+// import chivasLogo from "../assets/chivasLogo.png";
 import { Link } from "react-router-dom";
 import { Badge, createTheme, ThemeProvider } from "@mui/material";
 import { Bookmark, Logout, ShoppingCart } from "@mui/icons-material";
@@ -29,7 +29,7 @@ const Navbar = () => {
     palette: {
       mode: "light",
       primary: {
-        main: "#ffffff"
+        main: "#151515"
       },
     },
   });
@@ -62,7 +62,7 @@ const Navbar = () => {
                 sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
               >
                 <Link to="/">
-                  <img width={50} src={chivasLogo} alt="" />
+                  <img width={50} src="https://assets.chivas.com/prod/chivas.com/915/static/images/logo.png" alt="" />
                 </Link>
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -121,18 +121,18 @@ const Navbar = () => {
                 sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
               >
                 <Link to="/">
-                  <img width={50} src={chivasLogo} alt="" />
+                  <img width={50} src="https://assets.chivas.com/prod/chivas.com/915/static/images/logo.png" alt="" />
                 </Link>
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
                 <Link to="/admin-panel">
                   <Button sx={{ my: 2, color: "white", display: "block" }}>
-                    Админ панель
+                    Admin Panel
                   </Button>
                 </Link>
                 <Link to="/admin-panel/add">
                   <Button sx={{ my: 2, color: "white", display: "block" }}>
-                    Добавить продукт
+                    Add Product
                   </Button>
                 </Link>
               </Box>
@@ -182,3 +182,29 @@ const Navbar = () => {
   );
 };
 export default Navbar;
+
+// const Navbar = () => {
+//   return (
+//     <Box sx={{ flexGrow: 1 }}>
+//       <AppBar position="sticky">
+//         <Toolbar>
+//           <IconButton
+//             size="large"
+//             edge="start"
+//             color="inherit"
+//             aria-label="menu"
+//             sx={{ mr: 2 }}
+//           >
+//             <MenuIcon />
+//           </IconButton>
+//           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+//             News
+//           </Typography>
+//           <Button color="inherit">Login</Button>
+//         </Toolbar>
+//       </AppBar>
+//     </Box>
+//   );
+// };
+
+// export default Navbar;

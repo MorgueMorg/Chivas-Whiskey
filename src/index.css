@@ -114,5 +114,21 @@ video::-webkit-media-controls {
 }
 
 button {
-  color: #000000 !important;
+  color: #000000;
+}
+
+span {
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff !important;
+  text-decoration: none !important; 
+}
+
+.footer-logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
 }
