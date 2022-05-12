@@ -33,7 +33,7 @@ import {
       setSearchValue("");
       setDoughValue("");
       setSizeValue("");
-      navigate("/");
+      navigate("/catalog");
       getProducts();
     };
   
