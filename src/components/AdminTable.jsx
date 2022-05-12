@@ -10,8 +10,8 @@ import Paper from "@mui/material/Paper";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 import { adminContext } from "../contexts/AdminContext";
-import editbtn from "../assets/editbtn.png";
-import deletebtn from "../assets/deletebtn.png";
+// import editbtn from "../assets/editbtn.png";
+// import deletebtn from "../assets/deletebtn.png";
 
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
@@ -49,10 +49,12 @@ export default function AdminTable(props) {
             <StyledTableCell align="right">Размер</StyledTableCell>
             <StyledTableCell align="right">Тесто</StyledTableCell>
             <StyledTableCell align="right">
-              <img width={40} src={editbtn} alt="" />
+              {/* <img width={40} src={editbtn} alt="" /> */}
+              #
             </StyledTableCell>
             <StyledTableCell align="right">
-              <img width={40} src={deletebtn} alt="" />
+              {/* <img width={40} src={deletebtn} alt="" /> */}
+              #
             </StyledTableCell>
           </TableRow>
         </TableHead>

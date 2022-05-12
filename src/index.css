@@ -217,3 +217,7 @@ svg {
   padding: 30px 0;
   color: black;
 }
+
+.edit-btn {
+  color: black !important;
+}

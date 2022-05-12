@@ -1,15 +1,4 @@
 {
-  "products": [
-    {
-      "name": "wr",
-      "description": "qrwqrq",
-      "price": 2342141,
-      "image": "rqwr",
-      "dough": "Тонкое",
-      "size": "Средняя",
-      "id": 1,
-      "likes": 2
-    }
-  ],
+  "products": [],
   "data-cards": []
 }
