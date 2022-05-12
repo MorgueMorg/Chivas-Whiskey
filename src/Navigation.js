@@ -10,6 +10,7 @@ import MainPage from "./pages/MainPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import ProductDetails from "./pages/ProductDetails";
 import Favorites from "./pages/Favorites"
+import SignUp from "./pages/SignUp";
 // import NotFoundPage from "./pages/NotFoundPage";
 // import Footer from "./components/Footer";
 
@@ -27,6 +28,7 @@ const Navigation = () => {
         <Route path="/details/:id" element={<ProductDetails />}/>
         <Route path="/favorites" element={<Favorites/>}/>
         <Route path="/*" element={< NotFoundPage />} />
+        <Route path="/sign-up" element={<SignUp />} />
       </Routes>
       {/* <Footer /> */}
     </BrowserRouter>

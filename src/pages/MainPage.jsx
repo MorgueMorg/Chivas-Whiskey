@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
 import AboutUs from "./AboutUs";
@@ -15,6 +16,11 @@ const MainPage = () => {
         <LisaVid />
         <AboutUs />
         <LisaPhotos />
+        <Link to="/sign-up">
+          <button className="btn-outline" type="submit">
+            Sign Up
+          </button>
+        </Link>
         <picture className="pic">
           <img
             className="cover"

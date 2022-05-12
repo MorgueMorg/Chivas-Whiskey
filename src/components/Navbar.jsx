@@ -16,14 +16,14 @@ import { Badge, createTheme, ThemeProvider } from "@mui/material";
 import { Bookmark, Logout, ShoppingCart } from "@mui/icons-material";
 import { clientContext } from "../contexts/ClientContext";
 
-// const settings = ["Profile", "Account", "Dashboard", "Logout"];
+const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 const Navbar = () => {
-//   const data = React.useContext(clientContext);
-//   const { cartCount, authWithGoogle, user, logOut } = data;
+  const data = React.useContext(clientContext);
+  const { cartCount, authWithGoogle, user, logOut } = data;
 
-//   const [anchorElNav, setAnchorElNav] = React.useState(null);
-//   const [anchorElUser, setAnchorElUser] = React.useState(null);
+  const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const [anchorElUser, setAnchorElUser] = React.useState(null);
 
   const darkTheme = createTheme({
     palette: {
@@ -34,20 +34,20 @@ const Navbar = () => {
     },
   });
 
-//   const handleOpenNavMenu = (event) => {
-//     setAnchorElNav(event.currentTarget);
-//   };
-//   const handleOpenUserMenu = (event) => {
-//     setAnchorElUser(event.currentTarget);
-//   };
+  const handleOpenNavMenu = (event) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event) => {
+    setAnchorElUser(event.currentTarget);
+  };
 
-//   const handleCloseNavMenu = () => {
-//     setAnchorElNav(null);
-//   };
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
 
-//   const handleCloseUserMenu = () => {
-//     setAnchorElUser(null);
-//   };
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
   return (
     <React.Fragment>
@@ -162,7 +162,7 @@ const Navbar = () => {
                     <ShoppingCart style={{color: "white"}} />
                   </Badge>
                 </Link>
-                {/* {user ? (
+                {user ? (
                   <>
                     <Avatar
                       src={user.photoURL}
@@ -177,13 +177,13 @@ const Navbar = () => {
                 ) : (
                   <Button
                     className="singup-btn"
-                    // onClick={authWithGoogle}
+                    onClick={authWithGoogle}
                     variant="contained"
                     // theme={theme}
                   >
                     Войти
                   </Button>
-                )} */}
+                )}
               </Box>
             </Toolbar>
           </Container>
@@ -194,28 +194,3 @@ const Navbar = () => {
 };
 export default Navbar;
 
-// const Navbar = () => {
-//   return (
-//     <Box sx={{ flexGrow: 1 }}>
-//       <AppBar position="sticky">
-//         <Toolbar>
-//           <IconButton
-//             size="large"
-//             edge="start"
-//             color="inherit"
-//             aria-label="menu"
-//             sx={{ mr: 2 }}
-//           >
-//             <MenuIcon />
-//           </IconButton>
-//           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-//             News
-//           </Typography>
-//           <Button color="inherit">Login</Button>
-//         </Toolbar>
-//       </AppBar>
-//     </Box>
-//   );
-// };
-
-// export default Navbar;
