@@ -123,7 +123,7 @@ span {
 
 a {
   color: #ffffff !important;
-  text-decoration: none !important; 
+  text-decoration: none !important;
 }
 
 .footer-logo {
@@ -131,4 +131,89 @@ a {
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 5%;
+}
+
+/* Not Found Page */
+
+svg {
+  font-size: 150px;
+  padding-top: 11%;
+}
+
+.will {
+  fill: none;
+  stroke: #555;
+  stroke-width: 3px;
+  stroke-dasharray: 8% 30%;
+  stroke-dashoffset: 0;
+  animation: textanimation 6s linear infinite;
+}
+
+@keyframes textanimation {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+.will1 {
+  stroke: #9b83c5;
+  animation-delay: -1s;
+}
+
+.will2 {
+  stroke: #babebe;
+  animation-delay: -2s;
+}
+
+.will3 {
+  stroke: #b73a3a;
+  animation-delay: -3s;
+}
+
+.will4 {
+  stroke: #3ab7a0;
+  animation-delay: -4s;
+}
+
+.will5 {
+  stroke: #36518c;
+  animation-delay: -5s;
+}
+
+/* Add-page */
+
+.add-edit-page form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.add-btn {
+  color: white !important;
+  background-color: #151515 !important;
+}
+
+.filters-block {
+  display: grid;
+  grid-template-columns: 250px 200px 200px 150px;
+  column-gap: 25px;
+  align-items: center;
+  background-color: white;
+  max-width: 100%;
+}
+
+.products-list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  row-gap: 10px;
+  margin-top: 50px;
+  column-gap: 25px;
+}
+
+.my-pagination {
+  display: flex;
+  justify-content: center;
+  padding: 30px 0;
+  color: black;
 }

@@ -94,6 +94,12 @@ const Navbar = () => {
                     display: { xs: "block", md: "none" },
                   }}
                 >
+                  <Link to="/catalog">
+                    {/* <MenuItem onClick={handleCloseNavMenu}> */}
+                    <MenuItem>
+                      <Typography textAlign="center">Catalog</Typography>
+                    </MenuItem>
+                  </Link>
                   <Link to="/admin-panel">
                     {/* <MenuItem onClick={handleCloseNavMenu}> */}
                     <MenuItem>
@@ -125,6 +131,11 @@ const Navbar = () => {
                 </Link>
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+              <Link to="/catalog">
+                  <Button sx={{ my: 2, color: "white", display: "block" }}>
+                    Catalog
+                  </Button>
+                </Link>
                 <Link to="/admin-panel">
                   <Button sx={{ my: 2, color: "white", display: "block" }}>
                     Admin Panel

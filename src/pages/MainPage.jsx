@@ -11,7 +11,7 @@ const MainPage = () => {
   return (
     <>
       <div className="cont">
-        <Navbar />
+        {/* <Navbar /> */}
         <LisaVid />
         <AboutUs />
         <LisaPhotos />

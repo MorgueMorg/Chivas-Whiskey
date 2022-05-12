@@ -35,8 +35,8 @@ const reducer = (state = initState, action) => {
       return { ...state, cartCount: action.payload };
     case "GET_PRODUCTS_FROM_CART":
       return { ...state, myCart: action.payload };
-    case "CHECK_USER":
-      return { ...state, user: action.payload };
+    // case "CHECK_USER":
+    //   return { ...state, user: action.payload };
     case "GET_PRODUCT_DETAILS":
       return { ...state, productDetails: action.payload };
     case "ADD_PRODUCT_TO_FAVORITE":
@@ -263,24 +263,24 @@ const ClientContext = (props) => {
     getProducts();
   };
 
-  const authWithGoogle = async () => {
-    const provider = new GoogleAuthProvider();
-    signInWithPopup(auth, provider);
-  };
+//   const authWithGoogle = async () => {
+//     const provider = new GoogleAuthProvider();
+//     signInWithPopup(auth, provider);
+//   };
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-      const action = {
-        type: "CHECK_USER",
-        payload: user,
-      };
-      dispatch(action);
-    });
-  }, []);
+//   useEffect(() => {
+//     onAuthStateChanged(auth, (user) => {
+//       const action = {
+//         type: "CHECK_USER",
+//         payload: user,
+//       };
+//       dispatch(action);
+//     });
+//   }, []);
 
-  const logOut = () => {
-    signOut(auth);
-  };
+//   const logOut = () => {
+//     signOut(auth);
+//   };
 
   const getProductDetails = async (id) => {
     const response = await axios(`${API}/${id}`);
@@ -312,8 +312,8 @@ const ClientContext = (props) => {
         getProductsFromCart: getProductsFromCart,
         changeCountProductInCart: changeCountProductInCart,
         likeCounter: likeCounter,
-        authWithGoogle: authWithGoogle,
-        logOut: logOut,
+        // authWithGoogle: authWithGoogle,
+        // logOut: logOut,
         addFeedback: addFeedback,
         getProductDetails: getProductDetails,
         addProductToFavorite: addProductToFavorite,
@@ -329,7 +329,7 @@ const ClientContext = (props) => {
         myCart: state.myCart,
         myFavorite: state.myFavorite,
         productDetails: state.productDetails,
-        user: state.user,
+        // user: state.user,
       }}
     >
       {props.children}

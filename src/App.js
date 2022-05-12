@@ -10,15 +10,15 @@ import "bootstrap/dist/css/bootstrap.css";
 // import 'swiper/swiper.less'
 // import "swiper/swiper-bundle.css"
 // import "swiper/css/swiper.css"
-import 'swiper/css/bundle'
+import "swiper/css/bundle";
 
 const App = () => {
   return (
-    // <ClientContext>
-    //   <AdminContext>
+    <ClientContext>
+      <AdminContext>
         <Navigation />
-    //   </AdminContext>
-    // </ClientContext>
+      </AdminContext>
+    </ClientContext>
   );
 };
 export default App;
