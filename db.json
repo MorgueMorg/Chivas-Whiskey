@@ -4,10 +4,16 @@
       "name": "pepsi",
       "description": "sdfmsklfdlkds",
       "price": 100500,
-      "image": "esefkdsklg",
+      "image": "https://flowerlab.kg/wp-content/uploads/2021/07/chivas-0.5.jpg",
       "dough": "Толстое",
       "size": "Маленькая",
-      "id": 1
+      "id": 1,
+      "feedBacks": [
+        {
+          "title": "love live",
+          "user": "aktan"
+        }
+      ]
     }
   ],
   "data-cards": []

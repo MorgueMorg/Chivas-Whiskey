@@ -153,13 +153,13 @@ const Navbar = () => {
                 sx={{ flexGrow: 0 }}
               >
                 <Link to="/favorites" style={{ marginRight: 10 }}>
-                    <Bookmark />
+                    <Bookmark/>
                 </Link>
                 <Link to="/cart" style={{ marginRight: 10 }}>
                   {/* Снизу костыль  с цветом, в css я дал ссылку на класс и указал оранжевый */}
                   {/* <Badge badgeContent={cartCount} color="error"> */}
                   <Badge>
-                    <ShoppingCart />
+                    <ShoppingCart style={{color: "white"}} />
                   </Badge>
                 </Link>
                 {/* {user ? (

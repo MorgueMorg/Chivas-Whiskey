@@ -118,7 +118,8 @@ button {
 }
 
 span {
-  color: #ffffff;
+  /* color: #ffffff; */
+  color: #151515;
 }
 
 a {
@@ -224,4 +225,69 @@ svg {
 
 .save-btn {
   background-color: #151515 !important;
+}
+
+/* product-details */
+
+.product-details-feedback form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+
+.product-details {
+  display: flex;
+  margin-top: 50px;
+}
+
+.product-details img {
+  width: 40%;
+  height: 500px;
+  object-fit: contain;
+}
+
+.product-details > div {
+  width: 60%;
+}
+
+.product-details li {
+  margin: 5px;
+  font-size: 20px;
+}
+
+.product-details li strong {
+  width: 120px;
+  display: inline-block;
+}
+
+.product-details h2 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-left: 20px;
+}
+
+.product-details-feedback h3 {
+  font-size: 24px;
+  text-align: center;
+}
+
+.product-details-feedback > div {
+  max-width: 750px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.feedback {
+  background-color: rgb(214, 214, 214);
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px 0;
+}
+
+.feedback h5 {
+  font-size: 20px;
+  margin: 0;
 }
