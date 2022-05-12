@@ -1,4 +1,14 @@
 {
-  "products": [],
+  "products": [
+    {
+      "name": "pepsi",
+      "description": "sdfmsklfdlkds",
+      "price": 100500,
+      "image": "esefkdsklg",
+      "dough": "Толстое",
+      "size": "Маленькая",
+      "id": 1
+    }
+  ],
   "data-cards": []
 }
