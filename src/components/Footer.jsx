@@ -49,7 +49,7 @@ const Footer = () => {
                 Whatsapp
               </FooterLink>
             </Column>
-            <Column>
+            <Column className="social">
               <Heading>Social</Heading>
               <FooterLink href="#">
                 <i className="fab fa-facebook-f">

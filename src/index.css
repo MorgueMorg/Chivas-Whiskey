@@ -291,3 +291,7 @@ svg {
   font-size: 20px;
   margin: 0;
 }
+
+.social span {
+  color: white;
+}
