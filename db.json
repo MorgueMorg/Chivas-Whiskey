@@ -49,5 +49,14 @@
       "id": 4
     }
   ],
-  "data-cards": []
+  "data-cards": [
+    {
+      "cvc": "312",
+      "expiry": "3424",
+      "focus": "cvc",
+      "name": "dzanaliev aktan",
+      "number": "4214214124124124",
+      "id": 1
+    }
+  ]
 }
