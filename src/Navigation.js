@@ -15,7 +15,7 @@ import LogIn from "./pages/LogIn";
 import AuthProvider from "./contexts/AuthProvider";
 import { UserAuthContextProvider } from "./contexts/UserAuthContext";
 // import NotFoundPage from "./pages/NotFoundPage";
-// import Footer from "./components/Footer";
+import Footer from "./components/Footer";
 
 const Navigation = () => {
   return (
@@ -36,7 +36,7 @@ const Navigation = () => {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/login" element={<LogIn />} />
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
         </BrowserRouter>
       </AuthProvider>
     </UserAuthContextProvider>

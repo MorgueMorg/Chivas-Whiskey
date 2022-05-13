@@ -13,7 +13,8 @@
           "title": "love live",
           "user": "aktan"
         }
-      ]
+      ],
+      "likes": 3
     },
     {
       "name": "fsaFL;MSd;",
@@ -22,7 +23,8 @@
       "image": "https://www.gourmetencasa-tcm.com/17862/chivas-regal-12-years-old-1l.jpg",
       "dough": "Традиционное",
       "size": "Маленькая",
-      "id": 2
+      "id": 2,
+      "likes": 1
     },
     {
       "name": "ewq",

@@ -30,7 +30,7 @@ const MainPage = () => {
         </picture>
         <ChivasCocktails />
         <ChivasVid />
-        <Footer />
+        {/* <Footer /> */}
       </div>
     </>
   );
