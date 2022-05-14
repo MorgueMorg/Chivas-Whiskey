@@ -21,6 +21,11 @@ const MainPage = () => {
             Authorization
           </button>
         </Link>
+        <Link to="/chat">
+          <button className="btn-outline" type="submit">
+            Chat
+          </button>
+        </Link>
         <picture className="pic">
           <img
             className="cover"
