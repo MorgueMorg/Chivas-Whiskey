@@ -15,6 +15,7 @@ import NotFoundPage from "./pages/NotFoundPage";
 import ProductDetails from "./pages/ProductDetails";
 import Favorites from "./pages/Favorites";
 import Footer from "./components/Footer";
+import Auth from "./pages/Auth";
 
 const Navigation = () => {
   return (
@@ -30,6 +31,7 @@ const Navigation = () => {
           <Route path="/details/:id" element={<ProductDetails />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/*" element={<NotFoundPage />} />
+          <Route path="/auth" element={<Auth />} />
         </Routes>
         <Footer />
       </BrowserRouter>

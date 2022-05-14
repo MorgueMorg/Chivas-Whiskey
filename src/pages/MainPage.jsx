@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
+// import Footer from "../components/Footer";
+// import Navbar from "../components/Navbar";
 import AboutUs from "./AboutUs";
 import ChivasCocktails from "./ChivasCocktails";
 import ChivasVid from "./ChivasVid";
@@ -16,9 +16,9 @@ const MainPage = () => {
         <LisaVid />
         <AboutUs />
         <LisaPhotos />
-        <Link to="/sign-up">
+        <Link to="/auth">
           <button className="btn-outline" type="submit">
-            Sign Up
+            Authorization
           </button>
         </Link>
         <picture className="pic">

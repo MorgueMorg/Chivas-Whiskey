@@ -5,12 +5,15 @@ import Navigation from "./Navigation";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "swiper/css/bundle";
+import { UserContextProvider } from "./contexts/UserContext";
 
 const App = () => {
   return (
     <ClientContext>
       <AdminContext>
-            <Navigation />
+        <UserContextProvider>
+          <Navigation />
+        </UserContextProvider>
       </AdminContext>
     </ClientContext>
   );
