@@ -21,9 +21,9 @@ const App = () => {
       <AdminContext>
         <UserAuthContextProvider>
           <AuthContextProvider>
-          {/* <ChakraProvider> */}
+            {/* <ChakraProvider> */}
             <Navigation />
-          {/* </ChakraProvider> */}
+            {/* </ChakraProvider> */}
           </AuthContextProvider>
         </UserAuthContextProvider>
       </AdminContext>
