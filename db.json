@@ -27,17 +27,6 @@
       "likes": 1
     },
     {
-      "name": "ewq",
-      "description": "hiurguq",
-      "price": 31231231,
-      "image": "https://www.gourmetencasa-tcm.com/17862/chivas-regal-12-years-old-1l.jpg",
-      "size": "Средняя",
-      "dough": "Традиционное",
-      "feedbacks": [],
-      "likes": 0,
-      "id": 3
-    },
-    {
       "name": "dkfghdsnjkgfjkldf",
       "description": "adflkngnkdfngkl",
       "price": 42141241241,
@@ -47,6 +36,22 @@
       "feedbacks": [],
       "likes": 0,
       "id": 4
+    },
+    {
+      "name": "newChivas",
+      "description": "fokqjwfw'l;FL;Qf",
+      "price": 312312,
+      "image": "https://irecommend.ru/sites/default/files/product-images/35024/181.png",
+      "dough": "Тонкое",
+      "size": "Средняя",
+      "id": 5,
+      "feedBacks": [
+        {
+          "title": "lol",
+          "user": "new bro"
+        }
+      ],
+      "likes": 1
     }
   ],
   "data-cards": [

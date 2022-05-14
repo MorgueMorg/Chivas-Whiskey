@@ -157,8 +157,7 @@ const Navbar = () => {
                 </Link>
                 <Link to="/cart" style={{ marginRight: 10 }}>
                   {/* Снизу костыль  с цветом, в css я дал ссылку на класс и указал оранжевый */}
-                  {/* <Badge badgeContent={cartCount} color="error"> */}
-                  <Badge>
+                  <Badge badgeContent={cartCount} color="error">
                     <ShoppingCart style={{color: "white"}} />
                   </Badge>
                 </Link>

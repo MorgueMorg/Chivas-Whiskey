@@ -9,7 +9,7 @@ const Bottles = () => {
         rows={1}
         gap={10}
         hideArrow={false}
-        autoplay={3000}
+        autoplay={2000}
         loop
         // mobileBreakpoint={320}
         responsiveLayout={[

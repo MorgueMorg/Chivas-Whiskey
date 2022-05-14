@@ -101,6 +101,16 @@ const SignUp = () => {
             >
               Already have an account? <Link to="/login">Log In</Link>
             </div>
+            <div
+              style={{
+                marginTop: "10px",
+                display: "block",
+
+                width: "280px",
+              }}
+            >
+              Forgot your password? <Link to="/forgot-password">Reset</Link>
+            </div>
           </Box>
         </Box>
       </Container>
