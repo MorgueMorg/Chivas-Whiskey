@@ -1,7 +1,7 @@
 import { Container } from "@mui/material";
 import React, { useEffect } from "react";
-import AdminTable from "../components/AdminTable";
-import { adminContext } from "../contexts/AdminContext";
+import AdminTable from "../../components/AdminTable";
+import { adminContext } from "../../contexts/AdminContext";
 
 const AdminPage = () => {
   const data = React.useContext(adminContext);

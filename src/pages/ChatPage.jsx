@@ -1,21 +1,12 @@
 import React from "react";
-// Firebase deps
-// import firebase from "firebase/app";
-// import "firebase/auth";
-// import "firebase/firestore";
-
-// import * as firebase from "firebase/app";
-// import { getAuth } from "firebase/auth";
-// import { getDatabase } from "firebase/database";
-
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 // Hooks
 import { useAuthState, useDarkMode } from "../contexts/ChatContext";
 // Components
-import Channel from "../components/Channel";
-import Loader from "../components/Loader";
+import Channel from "../components/Chat/Channel";
+import Loader from "../components/Chat/Loader";
 
 firebase.initializeApp({
   apiKey: "AIzaSyD_JMEtISgeo_11MwzzHLkCgbviyGp2lzc",

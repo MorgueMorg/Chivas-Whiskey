@@ -1,7 +1,7 @@
 import React from "react";
-import chivas from "../videos/chivasvid.mp4";
+import lalisa from "../../videos/lalisa.mp4";
 
-const ChivasVid = () => {
+const LisaVid = () => {
   return (
     <video
       style={{ maxHeight: "800px", marginTop: "-50px" }}
@@ -10,10 +10,10 @@ const ChivasVid = () => {
       autoPlay
       loop
       muted
-      src={chivas}
+      src={lalisa}
       type="video/mp4"
     />
   );
 };
 
-export default ChivasVid;
+export default LisaVid;

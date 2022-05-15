@@ -1,6 +1,6 @@
 import { Button, Pagination } from "@mui/material";
 import React, { useContext } from "react";
-import { clientContext } from "../contexts/ClientContext";
+import { clientContext } from "../../contexts/ClientContext";
 // import theme from "./Theme";
 
 const MyPagination = () => {

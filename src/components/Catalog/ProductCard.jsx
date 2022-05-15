@@ -13,7 +13,7 @@ import ShareIcon from "@mui/icons-material/Share";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Reddit, ShoppingCart } from "@mui/icons-material";
 import BookmarkIcon from '@mui/icons-material/Bookmark';
-import { clientContext } from "../contexts/ClientContext";
+import { clientContext } from "../../contexts/ClientContext";
 import { Link } from "react-router-dom";
 import { blue, red } from "@mui/material/colors";
 

@@ -1,9 +1,9 @@
 import { Container } from "@mui/material";
 import React, { useContext } from "react";
 import { useEffect } from "react";
-import FiltersBlock from "../components/FiltersBlock";
-import MyPagination from "../components/MyPagination";
-import ProductCard from "../components/ProductCard";
+import FiltersBlock from "../components/Catalog/FiltersBlock";
+import MyPagination from "../components/Catalog/MyPagination";
+import ProductCard from "../components/Catalog/ProductCard";
 import { clientContext } from "../contexts/ClientContext";
 
 const Catalog = () => {

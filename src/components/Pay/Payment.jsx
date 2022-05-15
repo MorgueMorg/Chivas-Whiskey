@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "react-credit-cards";
 import axios from "axios";
-import { newApi } from "../helpers/newApi";
+import { newApi } from "../../helpers/newApi";
 
 export default class PaymentForm extends React.Component {
   state = {

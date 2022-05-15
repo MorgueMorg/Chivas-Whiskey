@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import PropTypes from "prop-types";
 // import firebase from '../firebase';
 import firebase from "firebase/compat/app";
-import { useFirestoreQuery } from "../contexts/ChatContext";
+import { useFirestoreQuery } from "../../contexts/ChatContext";
 // Components
 import Message from "./Message";
 

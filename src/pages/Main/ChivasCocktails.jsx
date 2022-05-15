@@ -1,5 +1,5 @@
 import React from 'react'
-import Bottles from '../components/Bottles'
+import Bottles from './Bottles'
 
 const ChivasCocktails = () => {
   return (

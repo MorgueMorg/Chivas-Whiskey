@@ -9,7 +9,7 @@ import {
 } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { adminContext } from "../contexts/AdminContext";
+import { adminContext } from "../../contexts/AdminContext";
 
 const EditProductPage = () => {
   const data = React.useContext(adminContext);

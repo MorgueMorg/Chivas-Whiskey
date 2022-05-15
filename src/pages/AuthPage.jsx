@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import Signin from "../components/SignIn";
-import Signup from "../components/SignUp";
+import Signin from "../components/Auth/SignIn";
+import Signup from "../components/Auth/SignUp";
 
-const Auth = () => {
+const AuthPage = () => {
   const [index, setIndex] = useState(false);
   const toggleIndex = () => {
     setIndex((prevState) => !prevState);
@@ -17,4 +17,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default AuthPage;

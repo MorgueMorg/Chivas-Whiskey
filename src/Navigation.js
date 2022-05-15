@@ -4,18 +4,18 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import Catalog from "./pages/Catalog";
+import Catalog from "./pages/CatalogPage";
 import Navbar from "./components/Navbar";
-import AddProductPage from "./pages/AddProductPage";
-import AdminPage from "./pages/AdminPage";
+import AddProductPage from "./pages/Crud/AddProductPage";
+import AdminPage from "./pages/Crud/AdminPage";
 import CartPage from "./pages/CartPage";
-import EditProductPage from "./pages/EditProduct";
-import MainPage from "./pages/MainPage";
+import EditProductPage from "./pages/Crud/EditProduct";
+import MainPage from "./pages/Main/MainPage";
 import NotFoundPage from "./pages/NotFoundPage";
-import ProductDetails from "./pages/ProductDetails";
-import Favorites from "./pages/Favorites";
+import ProductDetails from "./components/Catalog/ProductDetails";
+import Favorites from "./pages/FavoritesPage";
 import Footer from "./components/Footer";
-import Auth from "./pages/Auth";
+import AuthPage from "./pages/AuthPage";
 import ChatPage from "./pages/ChatPage";
 
 const Navigation = () => {
@@ -32,7 +32,7 @@ const Navigation = () => {
           <Route path="/details/:id" element={<ProductDetails />} />
           <Route path="/favorites" element={<Favorites />} />
           <Route path="/*" element={<NotFoundPage />} />
-          <Route path="/auth" element={<Auth />} />
+          <Route path="/auth" element={<AuthPage />} />
           <Route path="/chat" element={<ChatPage />} />
         </Routes>
         <Footer />

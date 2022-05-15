@@ -1,7 +1,7 @@
 import { Button, Container, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { clientContext } from "../contexts/ClientContext";
+import { clientContext } from "../../contexts/ClientContext";
 
 const ProductDetails = () => {
   const data = useContext(clientContext);

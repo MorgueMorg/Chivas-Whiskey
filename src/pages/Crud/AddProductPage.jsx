@@ -8,7 +8,7 @@ import {
     TextField,
   } from "@mui/material";
   import React, { useState } from "react";
-  import { adminContext } from "../contexts/AdminContext";
+  import { adminContext } from "../../contexts/AdminContext";
   
   const AddProductPage = () => {
     const data = React.useContext(adminContext);
