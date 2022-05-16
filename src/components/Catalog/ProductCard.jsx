@@ -36,6 +36,7 @@ export default function ProductCard({ item }) {
   const [liked, setLiked] = React.useState(false);
   const [views, setViews] = React.useState(false);
   const [star, setStar] = React.useState(0);
+  const [formValid, setFormValid] = React.useState(false);
   const data = React.useContext(clientContext);
   const {
     addProductToCart,
@@ -122,12 +123,12 @@ export default function ProductCard({ item }) {
           <span>{item.likes}</span>
         </IconButton>
         <IconButton
-          disabled={views}
-          onClick={() => {
-            viewsCounter(item.id, item.views || 0);
-            setViews(true);
-          }}
-          aria-label="add to favorites"
+          // disabled={views}
+          // onClick={() => {
+          //   viewsCounter(item.id, item.views || 0);
+          //   setViews(true);
+          // }}
+          // aria-label="add to favorites"
         >
           <VisibilityIcon color={views ? "error" : "inherit"} />
           <span>{item.views}</span>

@@ -15,7 +15,7 @@
         }
       ],
       "likes": 3,
-      "views": 2,
+      "views": 3,
       "star": 4
     },
     {
@@ -27,7 +27,8 @@
       "size": "Маленькая",
       "id": 2,
       "likes": 1,
-      "star": 4
+      "star": 4,
+      "views": 2
     },
     {
       "name": "dkfghdsnjkgfjkldf",
