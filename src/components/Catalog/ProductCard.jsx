@@ -12,9 +12,13 @@ import FavoriteIcon from "@mui/icons-material/Favorite";
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { ShoppingCart } from "@mui/icons-material";
-import BookmarkIcon from '@mui/icons-material/Bookmark';
+import BookmarkIcon from "@mui/icons-material/Bookmark";
 import { clientContext } from "../../contexts/ClientContext";
 import { Link } from "react-router-dom";
+import { API } from "../../helpers/api";
+import axios from "axios";
+import Box from "@mui/material/Box";
+import Rating from "@mui/material/Rating";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -31,11 +35,12 @@ export default function ProductCard({ item }) {
   const [expanded, setExpanded] = React.useState(false);
   const [liked, setLiked] = React.useState(false);
   const [views, setViews] = React.useState(false);
+  const [star, setStar] = React.useState(0);
   const data = React.useContext(clientContext);
   const {
     addProductToCart,
     checkProductInCart,
-    deleteProductInCart,    
+    deleteProductInCart,
     likeCounter,
     viewsCounter,
     addProductToFavorite,
@@ -43,13 +48,18 @@ export default function ProductCard({ item }) {
     deleteProductInFavorite,
   } = data;
 
+  // Функция для рейтинга, без парсинта вовзращает функцию вместо цифры на json-servere
+  const starCounter = async (id, star) => {
+    await axios.patch(`${API}/${id}`, { star: parseInt((star += setStar)) });
+  };
+
   const handleExpandClick = () => {
     setExpanded(!expanded);
   };
 
   return (
     // #e0ddd7
-    <Card sx={{ maxWidth: 345, background: 'white', color: "black"}}>
+    <Card sx={{ maxWidth: 345, background: "white", color: "black" }}>
       <Link to={`/details/${item.id}`}>
         <CardHeader
           disabled={views}
@@ -76,6 +86,22 @@ export default function ProductCard({ item }) {
         >
           {item.description}
         </Typography>
+        {/* <StarRating /> */}
+        <Box
+          sx={{
+            "& > legend": { mt: 2 },
+          }}
+        >
+          <Rating
+            name="simple-controlled"
+            value={star}
+            onChange={(e, newStar) => {
+              starCounter(item.id, newStar || 0);
+              // setValue(newValue);
+            }}
+          />
+        </Box>
+        {/* Star End */}
       </CardContent>
       <CardActions disableSpacing>
         <IconButton
@@ -99,16 +125,16 @@ export default function ProductCard({ item }) {
         >
           <VisibilityIcon color={views ? "error" : "inherit"} />
           <span>{item.views}</span>
-          </IconButton>
+        </IconButton>
         {checkProductInFavorite(item.id) ? (
-          <IconButton onClick={() => deleteProductInFavorite(item.id)} >
-            <BookmarkIcon color="error"/>
+          <IconButton onClick={() => deleteProductInFavorite(item.id)}>
+            <BookmarkIcon color="error" />
           </IconButton>
         ) : (
           <IconButton onClick={() => addProductToFavorite(item)}>
-            <BookmarkIcon sx={{ color: "black" }}  />
+            <BookmarkIcon sx={{ color: "black" }} />
           </IconButton>
-        )} 
+        )}
         {checkProductInCart(item.id) ? (
           <IconButton onClick={() => deleteProductInCart(item.id)}>
             <ShoppingCart color="error" />

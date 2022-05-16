@@ -15,7 +15,8 @@
         }
       ],
       "likes": 3,
-      "views": 2
+      "views": 2,
+      "star": 4
     },
     {
       "name": "fsaFL;MSd;",
@@ -25,7 +26,8 @@
       "dough": "Традиционное",
       "size": "Маленькая",
       "id": 2,
-      "likes": 1
+      "likes": 1,
+      "star": 4
     },
     {
       "name": "dkfghdsnjkgfjkldf",
@@ -36,7 +38,8 @@
       "dough": "Толстое",
       "feedbacks": [],
       "likes": 0,
-      "id": 4
+      "id": 4,
+      "star": 2
     },
     {
       "name": "newChivas",
