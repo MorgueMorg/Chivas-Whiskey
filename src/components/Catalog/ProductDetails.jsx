@@ -2,10 +2,11 @@ import { Button, Container, TextField } from "@mui/material";
 import React, { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { clientContext } from "../../contexts/ClientContext";
+import ProductCard from "./ProductCard";
 
 const ProductDetails = () => {
   const data = useContext(clientContext);
-  const { getProductDetails, productDetails, addFeedback } = data;
+  const { getProductDetails, productDetails, addFeedback, getProducts, products } = data;
   const params = useParams();
   const [feedbackValue, setFeedbackValue] = useState("");
   const [feedbackUser, setFeedbackUser] = useState("");
@@ -16,17 +17,17 @@ const ProductDetails = () => {
       title: feedbackValue.trim(),
       user: feedbackUser.trim(),
     };
-    
+
     for (let key in newFeedback) {
-        if (!newFeedback[key]) {
-            alert("Заполните поля")
-            return;
-        }
+      if (!newFeedback[key]) {
+        alert("Заполните поля");
+        return;
+      }
     }
 
-    addFeedback(newFeedback, productDetails)
-    setFeedbackValue("")
-    setFeedbackUser("")
+    addFeedback(newFeedback, productDetails);
+    setFeedbackValue("");
+    setFeedbackUser("");
   };
 
   useEffect(() => {
@@ -73,12 +74,12 @@ const ProductDetails = () => {
               type="text"
               variant="standard"
               label="Введите ваше имя"
-              style = {{ marginBottom: 15}}
+              style={{ marginBottom: 15 }}
             />
             <TextField
               value={feedbackValue}
               onChange={(e) => setFeedbackValue(e.target.value)}
-              style = {{ marginBottom: 15}}
+              style={{ marginBottom: 15 }}
               label="Введите ваш отзыв"
               type="text"
               multiline
@@ -90,12 +91,19 @@ const ProductDetails = () => {
             </Button>
           </form>
           <div>
-              {productDetails.feedBacks?.map((item, index) => (
-                  <div key={index} className="feedback">
-                      <h5>{item.user}</h5>
-                      <p>{item.title}</p>
-                  </div>
-              ))}
+            {productDetails.feedBacks?.map((item, index) => (
+              <div key={index} className="feedback">
+                <h5>{item.user}</h5>
+                <p>{item.title}</p>
+              </div>
+            ))}
+          </div>
+          <h2>Recommendations</h2>
+          {/* SLICE для вывода ограниченного кол-ва товаров */}
+          <div className="recommendations">
+            {products
+              .map((item, bro) => <ProductCard key={item.id} item={item} />)
+              .slice(1, 3)}
           </div>
         </div>
       </Container>
