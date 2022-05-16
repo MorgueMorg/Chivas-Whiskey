@@ -9,13 +9,12 @@ import Collapse from "@mui/material/Collapse";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import FavoriteIcon from "@mui/icons-material/Favorite";
-import ShareIcon from "@mui/icons-material/Share";
+import VisibilityIcon from "@mui/icons-material/Visibility";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import { Reddit, ShoppingCart } from "@mui/icons-material";
+import { ShoppingCart } from "@mui/icons-material";
 import BookmarkIcon from '@mui/icons-material/Bookmark';
 import { clientContext } from "../../contexts/ClientContext";
 import { Link } from "react-router-dom";
-import { blue, red } from "@mui/material/colors";
 
 const ExpandMore = styled((props) => {
   const { expand, ...other } = props;
@@ -31,12 +30,14 @@ const ExpandMore = styled((props) => {
 export default function ProductCard({ item }) {
   const [expanded, setExpanded] = React.useState(false);
   const [liked, setLiked] = React.useState(false);
+  const [views, setViews] = React.useState(false);
   const data = React.useContext(clientContext);
   const {
     addProductToCart,
     checkProductInCart,
     deleteProductInCart,    
     likeCounter,
+    viewsCounter,
     addProductToFavorite,
     checkProductInFavorite,
     deleteProductInFavorite,
@@ -50,7 +51,15 @@ export default function ProductCard({ item }) {
     // #e0ddd7
     <Card sx={{ maxWidth: 345, background: 'white', color: "black"}}>
       <Link to={`/details/${item.id}`}>
-        <CardHeader title={item.name} subheader={`${item.price} сом` } />
+        <CardHeader
+          disabled={views}
+          onClick={() => {
+            viewsCounter(item.id, item.views || 0);
+            setViews(true);
+          }}
+          title={item.name}
+          subheader={`${item.price} сом`}
+        />
       </Link>
       <CardMedia
         className="product-card-image"
@@ -80,9 +89,17 @@ export default function ProductCard({ item }) {
           <FavoriteIcon color={liked ? "error" : "inherit"} />
           <span>{item.likes}</span>
         </IconButton>
-        <IconButton aria-label="share">
-          <ShareIcon sx={{ color: "black" }}/>
-        </IconButton>
+        <IconButton
+          disabled={views}
+          onClick={() => {
+            viewsCounter(item.id, item.views || 0);
+            setViews(true);
+          }}
+          aria-label="add to favorites"
+        >
+          <VisibilityIcon color={views ? "error" : "inherit"} />
+          <span>{item.views}</span>
+          </IconButton>
         {checkProductInFavorite(item.id) ? (
           <IconButton onClick={() => deleteProductInFavorite(item.id)} >
             <BookmarkIcon color="error"/>

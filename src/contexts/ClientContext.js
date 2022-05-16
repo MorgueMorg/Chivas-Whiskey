@@ -263,6 +263,11 @@ const ClientContext = (props) => {
     getProducts();
   };
 
+  const viewsCounter = async (id, count) => {
+    await axios.patch(`${API}/${id}`, { views: count + 1 });
+    getProducts();
+  };
+
   const authWithGoogle = async () => {
     const provider = new GoogleAuthProvider();
     signInWithPopup(auth, provider);
@@ -312,6 +317,7 @@ const ClientContext = (props) => {
         getProductsFromCart: getProductsFromCart,
         changeCountProductInCart: changeCountProductInCart,
         likeCounter: likeCounter,
+        viewsCounter: viewsCounter,
         authWithGoogle: authWithGoogle,
         logOut: logOut,
         addFeedback: addFeedback,
