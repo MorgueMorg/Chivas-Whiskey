@@ -6,6 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
+import HistoryIcon from "@mui/icons-material/History";
 import Container from "@mui/material/Container";
 import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
@@ -29,7 +30,7 @@ const Navbar = () => {
     palette: {
       mode: "light",
       primary: {
-        main: "#151515"
+        main: "#151515",
       },
     },
   });
@@ -62,7 +63,11 @@ const Navbar = () => {
                 sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
               >
                 <Link to="/">
-                  <img width={50} src="https://assets.chivas.com/prod/chivas.com/915/static/images/logo.png" alt="" />
+                  <img
+                    width={50}
+                    src="https://assets.chivas.com/prod/chivas.com/915/static/images/logo.png"
+                    alt=""
+                  />
                 </Link>
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -71,14 +76,14 @@ const Navbar = () => {
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
-                //   onClick={handleOpenNavMenu}
+                  //   onClick={handleOpenNavMenu}
                   color="inherit"
                 >
                   <MenuIcon />
                 </IconButton>
                 <Menu
                   id="menu-appbar"
-                //   anchorEl={anchorElNav}
+                  //   anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: "bottom",
                     horizontal: "left",
@@ -88,8 +93,8 @@ const Navbar = () => {
                     vertical: "top",
                     horizontal: "left",
                   }}
-                //   open={Boolean(anchorElNav)}
-                //   onClose={handleCloseNavMenu}
+                  //   open={Boolean(anchorElNav)}
+                  //   onClose={handleCloseNavMenu}
                   sx={{
                     display: { xs: "block", md: "none" },
                   }}
@@ -109,7 +114,9 @@ const Navbar = () => {
                   <Link to="/admin-panel/add">
                     {/* <MenuItem onClick={handleCloseNavMenu}> */}
                     <MenuItem>
-                      <Typography textAlign="center">Добавить продукт</Typography>
+                      <Typography textAlign="center">
+                        Добавить продукт
+                      </Typography>
                     </MenuItem>
                   </Link>
                   <Link to="/favorites">
@@ -127,11 +134,15 @@ const Navbar = () => {
                 sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
               >
                 <Link to="/">
-                  <img width={50} src="https://assets.chivas.com/prod/chivas.com/915/static/images/logo.png" alt="" />
+                  <img
+                    width={50}
+                    src="https://assets.chivas.com/prod/chivas.com/915/static/images/logo.png"
+                    alt=""
+                  />
                 </Link>
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-              <Link to="/catalog">
+                <Link to="/catalog">
                   <Button sx={{ my: 2, color: "white", display: "block" }}>
                     Catalog
                   </Button>
@@ -153,11 +164,14 @@ const Navbar = () => {
                 sx={{ flexGrow: 0 }}
               >
                 <Link to="/favorites" style={{ marginRight: 10 }}>
-                    <Bookmark/>
+                  <Bookmark />
+                </Link>
+                <Link to="/history" style={{ marginRight: 10 }}>
+                  <HistoryIcon />
                 </Link>
                 <Link to="/cart" style={{ marginRight: 10 }}>
                   <Badge badgeContent={cartCount} color="error">
-                    <ShoppingCart style={{color: "white"}} />
+                    <ShoppingCart style={{ color: "white" }} />
                   </Badge>
                 </Link>
                 {user ? (
@@ -167,9 +181,11 @@ const Navbar = () => {
                       alt={user.displayName}
                       style={{ marginRight: 10 }}
                     />
-                    <span className="username" style={{ marginRight: 10 }}>{user.email}</span>
-                    <Button onClick={logOut} >
-                      <Logout color="error"/>
+                    <span className="username" style={{ marginRight: 10 }}>
+                      {user.email}
+                    </span>
+                    <Button onClick={logOut}>
+                      <Logout color="error" />
                     </Button>
                   </>
                 ) : (
@@ -191,4 +207,3 @@ const Navbar = () => {
   );
 };
 export default Navbar;
-

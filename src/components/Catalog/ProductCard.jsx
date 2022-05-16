@@ -46,6 +46,7 @@ export default function ProductCard({ item }) {
     addProductToFavorite,
     checkProductInFavorite,
     deleteProductInFavorite,
+    addProductToHistory,
   } = data;
 
   // Функция для рейтинга, без парсинта вовзращает функцию вместо цифры на json-servere
@@ -55,6 +56,11 @@ export default function ProductCard({ item }) {
 
   const handleExpandClick = () => {
     setExpanded(!expanded);
+  };
+
+  const doubbleAdd = (item) => {
+    addProductToCart(item);
+    addProductToHistory(item);
   };
 
   return (
@@ -140,7 +146,7 @@ export default function ProductCard({ item }) {
             <ShoppingCart color="error" />
           </IconButton>
         ) : (
-          <IconButton onClick={() => addProductToCart(item)}>
+          <IconButton onClick={() => doubbleAdd(item)}>
             <ShoppingCart sx={{ color: "black" }} />
           </IconButton>
         )}

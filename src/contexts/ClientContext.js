@@ -23,6 +23,10 @@ const initState = {
     ? JSON.parse(localStorage.getItem("favorite")).products.length
     : 0,
   myFavorite: null,
+  historyCount: JSON.parse(localStorage.getItem("history"))
+    ? JSON.parse(localStorage.getItem("history")).products.length
+    : 0,
+  myHistory: null,
 };
 
 const reducer = (state = initState, action) => {
@@ -45,6 +49,12 @@ const reducer = (state = initState, action) => {
       return { ...state, favoriteCount: action.payload };
     case "GET_PRODUCTS_FROM_FAVORITE":
       return { ...state, myFavorite: action.payload };
+    case "ADD_PRODUCTS_TO_HISTORY":
+      return { ...state, historyCount: action.payload };
+    // case "DELETE_PRODUCT_IN_FAVORITE":
+    //   return { ...state, favoriteCount: action.payload };
+    case "GET_PRODUCTS_FROM_HISTORY":
+      return { ...state, myHistory: action.payload };
     default:
       return state;
   }
@@ -258,6 +268,46 @@ const ClientContext = (props) => {
     getProductsFromFavorite();
   };
 
+  // ! History
+
+  const addProductToHistory = (product) => {
+    let history = JSON.parse(localStorage.getItem("history"));
+    if (!history) {
+      history = {
+        products: [],
+        totalPrice: 0,
+      };
+    }
+    const newProduct = {
+      product: product,
+      count: 1,
+      subPrice: 0,
+    };
+    newProduct.subPrice = product.price * newProduct.count;
+    history.products.push(newProduct);
+    history.totalPrice = history.products.reduce((prev, next) => {
+      return prev + next.subPrice;
+    }, 0);
+    localStorage.setItem("history", JSON.stringify(history));
+
+    const action = {
+      type: "ADD_PRODUCTS_TO_HISTORY",
+      payload: history.products.length,
+    };
+    dispatch(action);
+  };
+
+  const getProductsFromHistory = () => {
+    const history = JSON.parse(localStorage.getItem("history")) || {
+      products: [],
+    };
+    const action = {
+      type: "GET_PRODUCTS_FROM_HISTORY",
+      payload: history,
+    };
+    dispatch(action);
+  };
+
   const likeCounter = async (id, count) => {
     await axios.patch(`${API}/${id}`, { likes: count + 1 });
     getProducts();
@@ -327,6 +377,8 @@ const ClientContext = (props) => {
         deleteProductInFavorite: deleteProductInFavorite,
         getProductsFromFavorite: getProductsFromFavorite,
         changeCountProductInFavorite: changeCountProductInFavorite,
+        addProductToHistory: addProductToHistory,
+        getProductsFromHistory: getProductsFromHistory,
         productsPerPage: productsPerPage,
         totalCount: totalCount,
         products: products,
@@ -334,6 +386,8 @@ const ClientContext = (props) => {
         favoriteCount: state.favoriteCount,
         myCart: state.myCart,
         myFavorite: state.myFavorite,
+        historyCount: state.historyCount,
+        myHistory: state.myHistory,
         productDetails: state.productDetails,
         user: state.user,
       }}

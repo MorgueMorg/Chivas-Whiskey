@@ -13,6 +13,7 @@ import Favorites from "./pages/FavoritesPage";
 import Footer from "./components/Footer";
 import AuthPage from "./pages/AuthPage";
 import ChatPage from "./pages/ChatPage";
+import HistoryPage from "./pages/HistoryPage";
 
 const Navigation = () => {
   return (
@@ -30,6 +31,7 @@ const Navigation = () => {
         <Route path="/catalog" element={<Catalog />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/chat" element={<ChatPage />} />
+        <Route path="/history" element={<HistoryPage />} />
       </Routes>
       <Footer />
     </BrowserRouter>
