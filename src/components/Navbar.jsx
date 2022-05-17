@@ -125,6 +125,11 @@ const Navbar = () => {
                       <Typography textAlign="center">Избранное</Typography>
                     </MenuItem>
                   </Link>
+                  <Link to="/bottles-firebase">
+                    <MenuItem onClick={handleCloseNavMenu}>
+                      <Typography textAlign="center">Firebase</Typography>
+                    </MenuItem>
+                  </Link>
                 </Menu>
               </Box>
               <Typography
@@ -155,6 +160,11 @@ const Navbar = () => {
                 <Link to="/admin-panel/add">
                   <Button sx={{ my: 2, color: "white", display: "block" }}>
                     Add Product
+                  </Button>
+                </Link>
+                <Link to="/bottles-firebase">
+                  <Button sx={{ my: 2, color: "white", display: "block" }}>
+                    Firebase
                   </Button>
                 </Link>
               </Box>

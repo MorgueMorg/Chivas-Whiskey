@@ -14,6 +14,9 @@ import Footer from "./components/Footer";
 import AuthPage from "./pages/AuthPage";
 import ChatPage from "./pages/ChatPage";
 import HistoryPage from "./pages/HistoryPage";
+import BottlesFirePage from "./components/Data/BottlesFirePage";
+import AddBottles from "./components/Data/AddBottles";
+import EditBottles from "./components/Data/EditBottles";
 
 const Navigation = () => {
   return (
@@ -32,6 +35,9 @@ const Navigation = () => {
         <Route path="/cart" element={<CartPage />} />
         <Route path="/chat" element={<ChatPage />} />
         <Route path="/history" element={<HistoryPage />} />
+        <Route path="/bottles-firebase" element={<BottlesFirePage />} />
+        <Route path="/add-bottles" element={<AddBottles />} />
+        <Route path="/bottles-firebase/edit/:id" element={<EditBottles />} />
       </Routes>
       <Footer />
     </BrowserRouter>

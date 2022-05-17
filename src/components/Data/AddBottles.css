@@ -1,0 +1,52 @@
+.edit-container {
+    display: flex;
+    align-items: center;
+    width: 700px;
+    margin: 0 auto;
+}
+.edit-left {
+    display: flex;
+    width: 600px;
+    margin-top: 100px;
+}
+.add-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+}
+.admin-categories {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.admin-actors {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.add-container input {
+    width: 240px;
+    height: 30px;
+    margin: 5px;
+    background-color: rgb(216, 239, 246);
+    border: none;
+}
+.add-container button {
+    width: 240px;
+    height: 30px;
+    border: none;
+}
+.add-container button:hover {
+    background-color: rgb(234, 248, 251);
+}
+
+#add-submit {
+    background-color: rgb(4, 46, 59);
+    margin-top: 20px;
+    color: white;
+}
+#add-submit:hover {
+    background-color: rgb(38, 112, 134);
+}
