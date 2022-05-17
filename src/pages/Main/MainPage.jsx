@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import UtilsPage from "../UtilsPage";
 // import Footer from "../components/Footer";
 // import Navbar from "../components/Navbar";
 import AboutUs from "./AboutUs";
@@ -16,16 +17,6 @@ const MainPage = () => {
         <LisaVid />
         <AboutUs />
         <LisaPhotos />
-        <Link to="/auth">
-          <button className="btn-outline" type="submit">
-            Authorization
-          </button>
-        </Link>
-        <Link to="/chat">
-          <button className="btn-outline" type="submit">
-            Chat
-          </button>
-        </Link>
         <picture className="pic">
           <img
             className="cover"
@@ -33,6 +24,7 @@ const MainPage = () => {
             alt=""
           />
         </picture>
+        <UtilsPage />
         <ChivasCocktails />
         <ChivasVid />
         {/* <Footer /> */}

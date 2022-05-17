@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
 // import { useHistory } from "react-router-dom";
 import { bottlesContext } from "../../contexts/BottlesContext";
 // import MainNavbar from "../Main/MainNavbar";
@@ -142,9 +143,11 @@ const AddBottles = () => {
           />
           <button onClick={addActor}>Add Actor</button>
         </div> */}
-        <button id="add-submit" onClick={handleSubmit}>
-          Submit
-        </button>
+        <Link to="/bottles-firebase">
+          <button id="add-submit" onClick={handleSubmit}>
+            Submit
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -47,47 +47,47 @@ const ProductDetails = () => {
             <h2>{productDetails.name}</h2>
             <ul>
               <li>
-                <strong>Цена: </strong>
+                <strong>Price: </strong>
                 {productDetails.price}
               </li>
               <li>
-                <strong>Размер: </strong>
-                {productDetails.size}
+                <strong>Manufacturer: </strong>
+                {productDetails.manufacturer}
               </li>
               <li>
-                <strong>Тесто: </strong>
-                {productDetails.dough}
+                <strong>Fortress: </strong>
+                {productDetails.fortress}
               </li>
               <li>
-                <strong>Описание: </strong>
+                <strong>Description: </strong>
                 {productDetails.description}
               </li>
             </ul>
           </div>
         </div>
         <div className="product-details-feedback">
-          <h3>Отзывы: </h3>
+          <h3>Reviews: </h3>
           <form onSubmit={handleSubmit}>
             <TextField
               value={feedbackUser}
               onChange={(e) => setFeedbackUser(e.target.value)}
               type="text"
               variant="standard"
-              label="Введите ваше имя"
+              label="Enter your name"
               style={{ marginBottom: 15 }}
             />
             <TextField
               value={feedbackValue}
               onChange={(e) => setFeedbackValue(e.target.value)}
               style={{ marginBottom: 15 }}
-              label="Введите ваш отзыв"
+              label="Enter your feedback"
               type="text"
               multiline
               minRows={2}
               maxRows={5}
             />
             <Button type="submit" variant="contained" className="feedback-btn">
-              Оставить отзыв
+              Add feedback
             </Button>
           </form>
           <div>

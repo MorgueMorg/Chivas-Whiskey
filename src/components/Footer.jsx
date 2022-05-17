@@ -32,12 +32,14 @@ const Footer = () => {
               <Heading>About Us</Heading>
               <FooterLink href="/">Main</FooterLink>
               <FooterLink href="/cart">Cart</FooterLink>
+              <FooterLink href="/chat">Chat</FooterLink>
               <FooterLink href="/admin-panel/add">Added</FooterLink>
             </Column>
             <Column>
               <Heading>Service</Heading>
               <FooterLink href="/favorites">Favorites</FooterLink>
               <FooterLink href="/admin-panel">Admin panel</FooterLink>
+              <FooterLink href="/auth">Authorization</FooterLink>
               <FooterLink href="*">Error Page</FooterLink>
             </Column>
             <Column>

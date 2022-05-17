@@ -42,12 +42,12 @@ export default function AdminTable(props) {
         <TableHead>
           <TableRow>
             <StyledTableCell>#</StyledTableCell>
-            <StyledTableCell align="right">Название</StyledTableCell>
-            <StyledTableCell align="right">Описание</StyledTableCell>
-            <StyledTableCell align="right">Цена</StyledTableCell>
-            <StyledTableCell align="right">Фото</StyledTableCell>
-            <StyledTableCell align="right">Размер</StyledTableCell>
-            <StyledTableCell align="right">Тесто</StyledTableCell>
+            <StyledTableCell align="right">Title</StyledTableCell>
+            <StyledTableCell align="right">Description</StyledTableCell>
+            <StyledTableCell align="right">Price</StyledTableCell>
+            <StyledTableCell align="right">Image</StyledTableCell>
+            <StyledTableCell align="right">Fortress</StyledTableCell>
+            <StyledTableCell align="right">Manufacturer</StyledTableCell>
             <StyledTableCell align="right">
               {/* <img width={40} src={editbtn} alt="" /> */}
               #
@@ -72,8 +72,8 @@ export default function AdminTable(props) {
               <StyledTableCell align="right">
                 <img width={100} src="{item.image}" alt="" />
               </StyledTableCell>
-              <StyledTableCell align="right">{item.size}</StyledTableCell>
-              <StyledTableCell align="right">{item.dough}</StyledTableCell>
+              <StyledTableCell align="right">{item.manufactur}</StyledTableCell>
+              <StyledTableCell align="right">{item.fortress}</StyledTableCell>
               <StyledTableCell align="right">
                 <Link className="edit-btn" to={`/admin-panel/edit/${item.id}`}>EDIT</Link>
               </StyledTableCell>

@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import { Badge, createTheme, ThemeProvider } from "@mui/material";
 import { Bookmark, Logout, ShoppingCart } from "@mui/icons-material";
 import { clientContext } from "../contexts/ClientContext";
+import logo from "../assets/logo.png";
 
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
@@ -30,7 +31,9 @@ const Navbar = () => {
     palette: {
       mode: "light",
       primary: {
-        main: "#151515",
+        main: "#151515"
+        // "#151515",
+        // "#0c0d0d"
       },
     },
   });
@@ -62,12 +65,8 @@ const Navbar = () => {
                 component="div"
                 sx={{ mr: 2, display: { xs: "none", md: "flex" } }}
               >
-                <Link to="/">
-                  <img
-                    width={50}
-                    src="https://assets.chivas.com/prod/chivas.com/915/static/images/logo.png"
-                    alt=""
-                  />
+                <Link to="/" className="logo-chivas">
+                  <img width={50} src={logo} alt="" />
                 </Link>
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -76,14 +75,14 @@ const Navbar = () => {
                   aria-label="account of current user"
                   aria-controls="menu-appbar"
                   aria-haspopup="true"
-                  //   onClick={handleOpenNavMenu}
+                  onClick={handleOpenNavMenu}
                   color="inherit"
                 >
                   <MenuIcon />
                 </IconButton>
                 <Menu
                   id="menu-appbar"
-                  //   anchorEl={anchorElNav}
+                  anchorEl={anchorElNav}
                   anchorOrigin={{
                     vertical: "bottom",
                     horizontal: "left",
@@ -93,43 +92,53 @@ const Navbar = () => {
                     vertical: "top",
                     horizontal: "left",
                   }}
-                  //   open={Boolean(anchorElNav)}
-                  //   onClose={handleCloseNavMenu}
+                  open={Boolean(anchorElNav)}
+                  onClose={handleCloseNavMenu}
                   sx={{
                     display: { xs: "block", md: "none" },
                   }}
                 >
-                  <Link to="/catalog">
-                    {/* <MenuItem onClick={handleCloseNavMenu}> */}
-                    <MenuItem>
-                      <Typography textAlign="center">Catalog</Typography>
-                    </MenuItem>
-                  </Link>
-                  <Link to="/admin-panel">
-                    {/* <MenuItem onClick={handleCloseNavMenu}> */}
-                    <MenuItem>
-                      <Typography textAlign="center">Панель Админа</Typography>
-                    </MenuItem>
-                  </Link>
-                  <Link to="/admin-panel/add">
-                    {/* <MenuItem onClick={handleCloseNavMenu}> */}
-                    <MenuItem>
-                      <Typography textAlign="center">
-                        Добавить продукт
-                      </Typography>
-                    </MenuItem>
-                  </Link>
-                  <Link to="/favorites">
-                    {/* <MenuItem onClick={handleCloseNavMenu}> */}
-                    <MenuItem>
-                      <Typography textAlign="center">Избранное</Typography>
-                    </MenuItem>
-                  </Link>
-                  <Link to="/bottles-firebase">
-                    <MenuItem onClick={handleCloseNavMenu}>
-                      <Typography textAlign="center">Firebase</Typography>
-                    </MenuItem>
-                  </Link>
+                  <div className="tochka">
+                    <Link to="/catalog">
+                      <MenuItem onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center">Catalog</Typography>
+                      </MenuItem>
+                    </Link>
+                    <Link to="/admin-panel">
+                      <MenuItem onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center">
+                          Admin Panel
+                        </Typography>
+                      </MenuItem>
+                    </Link>
+                    <Link to="/admin-panel/add">
+                      <MenuItem onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center">
+                          Add Product
+                        </Typography>
+                      </MenuItem>
+                    </Link>
+                    <Link to="/favorites">
+                      <MenuItem onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center">Favorites</Typography>
+                      </MenuItem>
+                    </Link>
+                    <Link to="/bottles-firebase">
+                      <MenuItem onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center">Firebase</Typography>
+                      </MenuItem>
+                    </Link>
+                    <Link to="/chat">
+                      <MenuItem onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center">Chat</Typography>
+                      </MenuItem>
+                    </Link>
+                    <Link to="/auth">
+                      <MenuItem onClick={handleCloseNavMenu}>
+                        <Typography textAlign="center">Authorization</Typography>
+                      </MenuItem>
+                    </Link>
+                  </div>
                 </Menu>
               </Box>
               <Typography
@@ -138,12 +147,8 @@ const Navbar = () => {
                 component="div"
                 sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}
               >
-                <Link to="/">
-                  <img
-                    width={50}
-                    src="https://assets.chivas.com/prod/chivas.com/915/static/images/logo.png"
-                    alt=""
-                  />
+                <Link to="/" className="chivas-logo">
+                  <img width={50} src={logo} alt="" />
                 </Link>
               </Typography>
               <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
@@ -167,6 +172,11 @@ const Navbar = () => {
                     Firebase
                   </Button>
                 </Link>
+                <Link to="/chat">
+                  <Button sx={{ my: 2, color: "white", display: "block" }}>
+                    Chat
+                  </Button>
+                </Link>
               </Box>
 
               <Box
@@ -174,10 +184,10 @@ const Navbar = () => {
                 sx={{ flexGrow: 0 }}
               >
                 <Link to="/favorites" style={{ marginRight: 10 }}>
-                  <Bookmark />
+                  <Bookmark style={{ color: "white" }} />
                 </Link>
                 <Link to="/history" style={{ marginRight: 10 }}>
-                  <HistoryIcon />
+                  <HistoryIcon style={{ color: "white" }}/>
                 </Link>
                 <Link to="/cart" style={{ marginRight: 10 }}>
                   <Badge badgeContent={cartCount} color="error">
@@ -191,7 +201,7 @@ const Navbar = () => {
                       alt={user.displayName}
                       style={{ marginRight: 10 }}
                     />
-                    <span className="username" style={{ marginRight: 10 }}>
+                    <span className="username" style={{ marginRight: 10, color: "white" }}>
                       {user.email}
                     </span>
                     <Button onClick={logOut}>

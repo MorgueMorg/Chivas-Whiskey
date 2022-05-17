@@ -18,10 +18,10 @@ const BottlesFirePage = () => {
       <div className="admin-wrapper">
         <Container>
           <div className="add-manage">
-            <h3>Manage all movies</h3>
+            <h3>Manage chivas database</h3>
 
             <Link to="/add-bottles">
-              <button>Add New Movie</button>
+              <button>Add New Product</button>
             </Link>
           </div>
           <div className="admin-container">

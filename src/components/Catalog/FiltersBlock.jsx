@@ -15,15 +15,15 @@ import {
     const filter = new URLSearchParams(location.search);
   
     const [searchValue, setSearchValue] = useState(filter.get("q") || "");
-    const [doughValue, setDoughValue] = useState(filter.get("dough") || "");
-    const [sizeValue, setSizeValue] = useState(filter.get("size") || "");
+    const [fortressValue, setDoughValue] = useState(filter.get("fortress") || "");
+    const [manufacturValue, setSizeValue] = useState(filter.get("manufactur") || "");
   
     const handleFilters = (key, value) => {
       filter.set(key, value);
       navigate(`${location.pathname}?${filter.toString()}`);
       setSearchValue(filter.get("q") || "");
-      setDoughValue(filter.get("dough") || "");
-      setSizeValue(filter.get("size") || "");
+      setDoughValue(filter.get("fortress") || "");
+      setSizeValue(filter.get("manufactur") || "");
       getProducts();
     };
   
@@ -44,36 +44,36 @@ import {
           type="search"
           // sx={{ color: "white" }}
           sx={{ color: "black" }}
-          label="Живой поиск... "
+          label="Live search "
         />
         <FormControl variant="standard">
-          <InputLabel id="dough-label" sx={{ color: "black" }}>
-            Выберите тесто
+          <InputLabel id="fortress-label" sx={{ color: "black" }}>
+            Fortress
           </InputLabel>
           <Select
-            value={doughValue}
-            onChange={(e) => handleFilters("dough", e.target.value)}
-            label="Выберите тесто"
-            labelId="dough-label"
+            value={fortressValue}
+            onChange={(e) => handleFilters("fortress", e.target.value)}
+            label="Enter fortress"
+            labelId="fortress-label"
           >
-            <MenuItem value="Традиционное">Традиционное</MenuItem>
-            <MenuItem value="Тонкое">Тонкое</MenuItem>
-            <MenuItem value="Толстое">Толстое</MenuItem>
+            <MenuItem value="40%">40%</MenuItem>
+            <MenuItem value="60%">60%</MenuItem>
+            <MenuItem value="80%">80%</MenuItem>
           </Select>
         </FormControl>
         <FormControl variant="standard">
-          <InputLabel id="size-label" sx={{ color: "black" }}>
-            Выберите размер
+          <InputLabel id="manufactur-label" sx={{ color: "black" }}>
+            Manufactur
           </InputLabel>
           <Select
-            value={sizeValue}
-            onChange={(e) => handleFilters("size", e.target.value)}
+            value={manufacturValue}
+            onChange={(e) => handleFilters("manufactur", e.target.value)}
             label="Выберите размер"
-            labelId="size-label"
+            labelId="manufactur-label"
           >
-            <MenuItem value="Маленькая">Маленькая</MenuItem>
-            <MenuItem value="Средняя">Средняя</MenuItem>
-            <MenuItem value="Большая">Большая</MenuItem>
+            <MenuItem value="Spaceside">Spaceside</MenuItem>
+            <MenuItem value="Hilend">Hilend</MenuItem>
+            <MenuItem value="Bishkek">Bishkek</MenuItem>
           </Select>
         </FormControl>
         <Button
@@ -82,7 +82,7 @@ import {
           onClick={resetFilter}
           className="reset-btn"
         >
-          Сбросить
+          Reset
         </Button>
       </div>
     );

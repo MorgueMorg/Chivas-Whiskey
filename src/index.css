@@ -12,6 +12,10 @@ code {
     monospace;
 }
 
+li {
+  list-style-type: none;
+}
+
 video {
   object-fit: cover;
   width: 100%;
@@ -19,6 +23,14 @@ video {
   /* position: fixed; */
   z-index: 1;
   text-align: center;
+}
+
+.tocka p {
+  color: black;
+}
+
+ul a {
+  color: black;
 }
 
 /* Убирает элементы плеера */
@@ -49,6 +61,25 @@ video::-webkit-media-controls {
   /* margin-bottom: 60px; */
   color: #000000;
   background-color: #000000;
+}
+
+.card-form {
+  display: flex;
+  margin-top: 15px;
+}
+
+.card-form input {
+  padding: 10px;
+  border-radius: 10px;
+  margin: 15px;
+}
+
+.card-form button {
+  margin: 15px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: gray;
+  color: white !important;
 }
 
 .cover {
@@ -87,8 +118,9 @@ video::-webkit-media-controls {
 }
 
 .bottles div {
-  margin-left: auto;
-  margin-right: -50;
+  /* margin-left: auto;
+  margin-right: -50; */
+  text-align: center;
 }
 
 .bottles img {
@@ -123,7 +155,7 @@ span {
 }
 
 a {
-  color: #ffffff !important;
+  /* color: #ffffff !important; */
   text-decoration: none !important;
 }
 
@@ -341,4 +373,151 @@ svg {
   font-weight: bold;
   max-width: 400px;
   margin-bottom: 18px;
+}
+
+.Utils {
+  position: relative;
+  width: 100%;
+}
+
+.Utils img {
+  width: 100%;
+  height: auto;
+}
+
+.btns {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  background-color: #555;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: #ffffff;
+}
+
+.btns button {
+  margin: 5px;
+}
+
+@media all and (max-width: 768px) {
+  .filters-block {
+    display: grid;
+    grid-template-columns: auto;
+    column-gap: 25px;
+    align-items: center;
+    background-color: white;
+    max-width: 100%;
+  }
+
+  .products-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: auto;
+    row-gap: 10px;
+    margin-top: 50px;
+    column-gap: 25px;
+  }
+
+  .username {
+    display: none;
+  }
+
+  .card-form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-form input {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  .btns {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 0px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    height: 70%;
+    background-color: white;
+  }
+  a {
+    padding: 0px;
+    margin: 0;
+  }
+  .btns button {
+    padding: 0px;
+    margin: 0 !important;
+    width: 100%;
+    /* margin: 5px; */
+  }
+  .username {
+    display: none;
+  }
+  .chivas-logo {
+    display: none;
+  }
+  .lalisa-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lalisa-text h1 {
+    font-weight: bold;
+    margin: 40px;
+  }
+
+  .lalisa-text p {
+    text-align: center;
+    width: 60%;
+    font-size: 85%;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .products-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 10px;
+    margin-top: 50px;
+    column-gap: 25px;
+  }
+}
+
+@media all and (min-width: 1024px) {
+  .products-list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 10px;
+    margin-top: 50px;
+    column-gap: 25px;
+  }
 }

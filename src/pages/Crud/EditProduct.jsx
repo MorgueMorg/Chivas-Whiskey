@@ -50,14 +50,14 @@ const EditProductPage = () => {
   return (
     <Container>
       <div className="add-edit-page">
-        <h2>Редактировать товар</h2>
+        <h2>Edit Product</h2>
         <form onSubmit={handleSubmit}>
           <TextField
             onChange={(e) =>
               setEditedProduct({ ...editedProduct, name: e.target.value })
             }
             value={editedProduct.name}
-            label="Введите название"
+            label="Title"
             variant="standard"
           />
           <TextField
@@ -68,7 +68,7 @@ const EditProductPage = () => {
               })
             }
             value={editedProduct.description}
-            label="Введите описание"
+            label="Description"
             variant="standard"
           />
           <TextField
@@ -80,7 +80,7 @@ const EditProductPage = () => {
               })
             }
             value={editedProduct.price}
-            label="Введите цену"
+            label="Price"
             variant="standard"
           />
           <TextField
@@ -88,41 +88,41 @@ const EditProductPage = () => {
               setEditedProduct({ ...editedProduct, image: e.target.value })
             }
             value={editedProduct.image}
-            label="Введите фото"
+            label="Image"
             variant="standard"
           />
           <FormControl variant="standard">
-            <InputLabel id="dough-select-label">Выберите тесто</InputLabel>
+            <InputLabel id="fortress-select-label">Fortress</InputLabel>
             <Select
-              value={editedProduct.dough}
+              value={editedProduct.fortress}
               onChange={(e) =>
-                setEditedProduct({ ...editedProduct, dough: e.target.value })
+                setEditedProduct({ ...editedProduct, fortress: e.target.value })
               }
-              label="Выберите тесто"
-              labelId="dough-select-label"
+              label="Ender fortress"
+              labelId="fortress-select-label"
             >
-              <MenuItem value="Традиционное">Традиционное</MenuItem>
-              <MenuItem value="Тонкое">Тонкое</MenuItem>
-              <MenuItem value="Толстое">Толстое</MenuItem>
+              <MenuItem value="40%">40%</MenuItem>
+              <MenuItem value="60%">60%</MenuItem>
+              <MenuItem value="80%">80%</MenuItem>
             </Select>
           </FormControl>
           <FormControl variant="standard">
-            <InputLabel id="size-select-label">Выберите размер</InputLabel>
+            <InputLabel id="manufactur-select-label">Manufacturer</InputLabel>
             <Select
               onChange={(e) =>
-                setEditedProduct({ ...editedProduct, size: e.target.value })
+                setEditedProduct({ ...editedProduct, manufactur: e.target.value })
               }
-              value={editedProduct.size}
-              label="Выберите размер"
-              labelId="size-select-label"
+              value={editedProduct.manufactur}
+              label="Enter manufacturer"
+              labelId="manufactur-select-label"
             >
-              <MenuItem value="Маленькая">Маленькая</MenuItem>
-              <MenuItem value="Средняя">Средняя</MenuItem>
-              <MenuItem value="Большая">Большая</MenuItem>
+              <MenuItem value="Spaceside">Spaceside</MenuItem>
+              <MenuItem value="Hilend">Hiland</MenuItem>
+              <MenuItem value="Bishkek">Bishkek</MenuItem>
             </Select>
           </FormControl>
           <Button type="submit" variant="contained" className="save-btn">
-            Сохранить изменения
+            Save changes
           </Button>
         </form>
       </div>

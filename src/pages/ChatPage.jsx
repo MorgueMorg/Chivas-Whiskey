@@ -147,9 +147,6 @@ function ChatPage() {
         className="flex-shrink-0 flex items-center justify-between px-4 sm:px-8 shadow-md"
         style={{ height: "var(--topbar-height)" }}
       >
-        <a href="https://alterclass.io/courses/react">
-          <img src={brandLogo} alt="AlterClass" width={150} />
-        </a>
         <div className="flex items-center">
           {user ? (
             <button
@@ -159,10 +156,6 @@ function ChatPage() {
               Sign out
             </button>
           ) : null}
-          <ThemeIcon
-            className="h-8 w-8 cursor-pointer"
-            onClick={() => setDarkMode((prev) => !prev)}
-          />
         </div>
       </header>
       <main
