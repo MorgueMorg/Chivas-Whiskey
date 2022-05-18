@@ -4,20 +4,211 @@
       "name": "Chivas Lisa",
       "description": "Good whiskey",
       "price": 800,
-      "image": "https://chivas.idlcloud.com/stage/basic_uploads/sir-trevor/61bb4d18edc11.png",
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
       "fortress": "40%",
       "manufactur": "Hiland",
       "id": 1,
-      "views": 2
+      "views": 4,
+      "likes": 2,
+      "star": 1
     },
     {
       "name": "vsdnfsd",
       "description": "sdfdsf",
       "price": 2321,
-      "image": "https://chivas.idlcloud.com/stage/basic_uploads/sir-trevor/61bb4d18edc11.png",
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
       "fortress": "80%",
       "manufactur": "Spaceside",
-      "id": 2
+      "id": 2,
+      "likes": 1,
+      "views": 2,
+      "star": 3
+    },
+    {
+      "name": "fdsfs",
+      "description": "dsfds",
+      "price": 2312,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "40%",
+      "manufactur": "Hiland",
+      "id": 3
+    },
+    {
+      "name": "dsfdsfs",
+      "description": "dsfsdf",
+      "price": 23421,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Spaceside",
+      "id": 4
+    },
+    {
+      "name": "fdsf",
+      "description": "sdfsd",
+      "price": 2131,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Spaceside",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 5
+    },
+    {
+      "name": "fdsfds",
+      "description": "sdfsd",
+      "price": 31,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Bishkek",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 6
+    },
+    {
+      "name": "dfdsfsd",
+      "description": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "price": 3213,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Hiland",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 7
+    },
+    {
+      "name": "fcxdc",
+      "description": "dsf",
+      "price": 31,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Spaceside",
+      "id": 8
+    },
+    {
+      "name": "fdsfsd",
+      "description": "sdfsd",
+      "price": 3123,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "40%",
+      "manufactur": "Hiland",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 9
+    },
+    {
+      "name": "fdsfsdfds",
+      "description": "fsdfsd",
+      "price": 321,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "40%",
+      "manufactur": "Spaceside",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 10
+    },
+    {
+      "name": "sdfsdfsd",
+      "description": "e1fds",
+      "price": 31231,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "80%",
+      "manufactur": "Hiland",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 11
+    },
+    {
+      "name": "fdsfsd",
+      "description": "dsfsd",
+      "price": 1241241,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Spaceside",
+      "id": 12
+    },
+    {
+      "name": "fdsfsd",
+      "description": "dsfsd",
+      "price": 312,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "40%",
+      "manufactur": "Hiland",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 13
+    },
+    {
+      "name": "fdsfsd",
+      "description": "sdfds",
+      "price": 312,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "40%",
+      "manufactur": "Spaceside",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 14
+    },
+    {
+      "name": "cssfds",
+      "description": "fsdfsd",
+      "price": 4312,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Spaceside",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 15
+    },
+    {
+      "name": "sdfsdfsdf",
+      "description": "fsdfsdfsd",
+      "price": 412412,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Hiland",
+      "id": 16
+    },
+    {
+      "name": "sdfdsfsdfs",
+      "description": "fsdfsdfsd",
+      "price": 31231,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Spaceside",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 17
+    },
+    {
+      "name": "sdfsdfsd",
+      "description": "fsdfsdfsd",
+      "price": 23123,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "40%",
+      "manufactur": "Hiland",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 18
+    },
+    {
+      "name": "13123",
+      "description": "fsdfsdf",
+      "price": 3123,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "40%",
+      "manufactur": "Spaceside",
+      "feedbacks": [],
+      "likes": 0,
+      "id": 19
+    },
+    {
+      "name": "fdsfs",
+      "description": "efsdfsd",
+      "price": 23131,
+      "image": "http://cdn.shopify.com/s/files/1/0456/1459/6305/products/alcohol-chivas-twelve-years-whiskey-liquor-700ml.jpg?v=1613185485",
+      "fortress": "60%",
+      "manufactur": "Spaceside",
+      "id": 20
     }
   ],
   "data-cards": [
@@ -28,6 +219,14 @@
       "name": "dzanaliev aktan",
       "number": "4214214124124124",
       "id": 1
+    },
+    {
+      "cvc": "144",
+      "expiry": "4124",
+      "focus": "cvc",
+      "name": "dzanaliev aktan",
+      "number": "4214124512512512",
+      "id": 2
     }
   ]
 }
