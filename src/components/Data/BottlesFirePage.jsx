@@ -11,7 +11,6 @@ const BottlesFirePage = () => {
   useEffect(() => {
     getBottles();
   }, []);
-  console.log(bottlesData);
   return (
     <>
       {/* <MainNavbar /> */}

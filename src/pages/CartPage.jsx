@@ -26,13 +26,13 @@ const CartPage = () => {
   }
 
   if (myCart.products.length === 0) {
-    return <h2>Корзина пуста</h2>;
+    return <h2>Cart cleaned</h2>;
   }
 
   return (
     <div>
       <Container>
-        <h2>Корзина</h2>
+        <h2>Cart</h2>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>
@@ -69,7 +69,7 @@ const CartPage = () => {
                       }
                     />
                   </TableCell>
-                  <TableCell align="center">{item.subPrice} сом</TableCell>
+                  <TableCell align="center">{item.subPrice} $</TableCell>
                 </TableRow>
               ))}
             </TableBody>
@@ -79,7 +79,7 @@ const CartPage = () => {
                   <h2>Итоговая сумма</h2>
                 </TableCell>
                 <TableCell align="center">
-                  <h2>{myCart.totalPrice} сом</h2>
+                  <h2>{myCart.totalPrice} $</h2>
                 </TableCell>
               </TableRow>
             </TableFooter>

@@ -8,7 +8,7 @@
       "fortress": "40%",
       "manufactur": "Hiland",
       "id": 1,
-      "views": 4,
+      "views": 6,
       "likes": 2,
       "star": 1
     },
@@ -20,9 +20,9 @@
       "fortress": "80%",
       "manufactur": "Spaceside",
       "id": 2,
-      "likes": 1,
-      "views": 2,
-      "star": 3
+      "likes": 2,
+      "views": 4,
+      "star": 4
     },
     {
       "name": "fdsfs",
@@ -227,6 +227,22 @@
       "name": "dzanaliev aktan",
       "number": "4214124512512512",
       "id": 2
+    },
+    {
+      "cvc": "414",
+      "expiry": "4124",
+      "focus": "expiry",
+      "name": "dzhanaliev aktan",
+      "number": "4124124",
+      "id": 3
+    },
+    {
+      "cvc": "312",
+      "expiry": "4444",
+      "focus": "cvc",
+      "name": "dzhanaliev aktan",
+      "number": "4214124124124312",
+      "id": 4
     }
   ]
 }

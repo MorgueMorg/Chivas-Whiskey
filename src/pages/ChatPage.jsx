@@ -139,7 +139,7 @@ function ChatPage() {
           {user ? (
             <button
               onClick={signOut}
-              className="uppercase text-sm font-medium text-primary-500 hover:text-white tracking-wide hover:bg-primary-500 bg-transparent rounded py-2 px-4 mr-4 focus:outline-none focus:ring focus:ring-primary-500 focus:ring-opacity-75 transition-all"
+              className="signout-btn"
             >
               Sign out
             </button>

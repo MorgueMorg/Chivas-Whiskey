@@ -4,7 +4,7 @@
 import React, { useReducer } from "react";
 import "firebase/compat/firestore";
 import firebase from "firebase/compat/app";
-import { db } from "../firebase";
+// import { db } from "../firebase";
 
 // import 'firebase/compat/db';
 // import { useAuth } from "./AuthContext";

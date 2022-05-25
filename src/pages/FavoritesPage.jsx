@@ -24,13 +24,13 @@ const Favorites = () => {
   }
 
   if (myFavorite.products.length === 0) {
-    return <h2>Избранное пусто</h2>;
+    return <h2>Favorites cleaned </h2>;
   }
 
   return (
     <div>
       <Container>
-        <h2>Избранное</h2>
+        <h2>Favorites</h2>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 650 }} aria-label="simple table">
             <TableHead>

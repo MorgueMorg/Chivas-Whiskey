@@ -409,6 +409,11 @@ svg {
   margin: 5px;
 }
 
+.signout-btn {
+  margin: auto;
+  display: block;
+}
+
 @media all and (max-width: 768px) {
   .filters-block {
     display: grid;
