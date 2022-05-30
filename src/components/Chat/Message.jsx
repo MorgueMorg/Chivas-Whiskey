@@ -36,7 +36,7 @@ const Message = ({
       <div>
         <div className="flex items-center mb-1">
           {displayName ? (
-            <p className="mr-2 text-primary-500">{displayName}</p>
+            <h5 className="mr-2 text-primary-500">{displayName}</h5>
           ) : null}
           {createdAt?.seconds ? (
             <span className="text-gray-500 text-xs">
@@ -44,7 +44,7 @@ const Message = ({
             </span>
           ) : null}
         </div>
-        <p>{text}</p>
+        <h6>{text}</h6>
       </div>
     </div>
   );
