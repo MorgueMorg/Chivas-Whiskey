@@ -1,12 +1,12 @@
 import React from "react";
 import AdminContext from "./contexts/AdminContext";
 import ClientContext from "./contexts/ClientContext";
+import BottlesContextProvider from "./contexts/BottlesContext";
 import Navigation from "./Navigation";
+import { UserContextProvider } from "./contexts/UserContext";
 
 import "bootstrap/dist/css/bootstrap.css";
 import "swiper/css/bundle";
-import { UserContextProvider } from "./contexts/UserContext";
-import BottlesContextProvider from "./contexts/BottlesContext";
 
 const App = () => {
   return (

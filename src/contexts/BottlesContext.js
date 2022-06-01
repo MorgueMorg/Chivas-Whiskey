@@ -72,7 +72,7 @@ const reducer = (state = INIT_STATE, action) => {
 const BottlesContextProvider = ({ children }) => {
   const [state, dispatch] = useReducer(reducer, INIT_STATE);
   const db = firebase.firestore();
-  const messagesRef = db.collection("bottles");
+  // const messagesRef = db.collection("bottles");
   //   const { currentUser } = useAuth();
   // --------------Functions go here ---------------------
   // ======== GET ALL MOVIES ------------------

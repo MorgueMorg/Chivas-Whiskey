@@ -1,5 +1,5 @@
-import { Container, TableFooter } from "@mui/material";
-import React, { useContext, useEffect } from "react";
+import { Container } from "@mui/material";
+import React, { useEffect } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -13,7 +13,7 @@ const rows = [];
 
 const Favorites = () => {
   const data = React.useContext(clientContext);
-  const { getProductsFromFavorite, myFavorite, changeCountProductInFavorite } =
+  const { getProductsFromFavorite, myFavorite } =
     data;
 
   useEffect(() => {

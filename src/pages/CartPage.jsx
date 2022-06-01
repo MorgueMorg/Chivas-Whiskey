@@ -1,5 +1,5 @@
 import { Container, TableFooter } from "@mui/material";
-import React, { useContext, useEffect } from "react";
+import React, { useEffect } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -8,7 +8,6 @@ import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import { clientContext } from "../contexts/ClientContext";
-import Cards from "react-credit-cards";
 import PaymentForm from "../components/Pay/Payment";
 import "react-credit-cards/es/styles-compiled.css";
 
@@ -16,7 +15,7 @@ const rows = [];
 
 const CartPage = () => {
   const data = React.useContext(clientContext);
-  const { getProductsFromCart, myCart, changeCountProductInCart, post } = data;
+  const { getProductsFromCart, myCart, changeCountProductInCart } = data;
 
   useEffect(() => {
     getProductsFromCart();

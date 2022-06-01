@@ -2,20 +2,14 @@ import React from "react";
 import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
+import { firebaseConfig } from "../firebase";
 // Hooks
 import { useAuthState, useDarkMode } from "../contexts/ChatContext";
 // Components
 import Channel from "../components/Chat/Channel";
 import Loader from "../components/Chat/Loader";
 
-firebase.initializeApp({
-  apiKey: "AIzaSyD_JMEtISgeo_11MwzzHLkCgbviyGp2lzc",
-  authDomain: "chivas-8eb6d.firebaseapp.com",
-  projectId: "chivas-8eb6d",
-  storageBucket: "chivas-8eb6d.appspot.com",
-  messagingSenderId: "300931816225",
-  appId: "1:300931816225:web:4c22297c1a440aace9bc60",
-});
+firebase.initializeApp(firebaseConfig)
 
 const MoonIcon = (props) => (
   <svg
@@ -45,13 +39,6 @@ const SunIcon = (props) => (
 
 function ChatPage() {
   const { user, initializing } = useAuthState(firebase.auth());
-  const [darkMode, setDarkMode] = useDarkMode();
-
-  const brandLogo = darkMode
-    ? `${process.env.PUBLIC_URL}/logo_white.svg`
-    : `${process.env.PUBLIC_URL}/logo.svg;`;
-
-  const ThemeIcon = darkMode ? SunIcon : MoonIcon;
 
   const signInWithGoogle = async () => {
     // Retrieve Google provider object
@@ -87,12 +74,8 @@ function ChatPage() {
     return (
       <div className="flex items-center justify-center shadow-md h-full">
         <div className="flex flex-col items-center justify-center max-w-xl w-full mx-4 p-8 rounded-md shadow-card bg-white dark:bg-coolDark-600 transition-all">
-          <h2 className="mb-2 text-3xl flex items-center">
-            React FireChat
-          </h2>
-          <p className="mb-8 text-lg text-center">
-            For JS Hackathon
-          </p>
+          <h2 className="mb-2 text-3xl flex items-center">React FireChat</h2>
+          <p className="mb-8 text-lg text-center">For JS Hackathon</p>
           <button
             onClick={signInWithGoogle}
             className="rounded shadow-button pl-6 pr-8 py-3 bg-white hover:bg-gray-50 text-gray-600 font-medium flex items-center justify-center overflow-y-hidden focus:outline-none focus:ring focus:ring-primary-500 focus:ring-opacity-75"
@@ -137,10 +120,7 @@ function ChatPage() {
       >
         <div className="flex items-center">
           {user ? (
-            <button
-              onClick={signOut}
-              className="signout-btn"
-            >
+            <button onClick={signOut} className="signout-btn">
               Sign out
             </button>
           ) : null}
